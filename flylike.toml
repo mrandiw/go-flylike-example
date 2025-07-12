@@ -1,0 +1,30 @@
+[app]
+name = "go-flylike-example"
+version = "1.0.0"
+
+[build]
+dockerfile = "Dockerfile"
+context = "."
+
+[deploy]
+replicas = 1
+
+[env]
+[env.variables]
+PORT = "8080"
+
+[[port]]
+internal = 8080
+external = 8080
+protocol = "tcp"
+
+[health]
+enabled = true
+path = "/health"
+
+# Git configuration - NEW!
+[git]
+url = "https://github.com/yourusername/your-repo.git"
+branch = "main"
+commit = ""    # Optional: specific commit hash
+token = ""     # Optional: GitHub token for private repos
