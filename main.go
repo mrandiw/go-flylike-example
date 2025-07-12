@@ -14,7 +14,7 @@ func main() {
 	})
 
 	router.GET("/health", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"message": "health"})
+		c.JSON(http.StatusOK, gin.H{"message": "health check passed"})
 	})
 
 	router.Run(":9090")
