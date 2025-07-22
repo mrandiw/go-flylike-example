@@ -38,11 +38,10 @@ go-api-app/
   --from-literal=api_key=your-api-key
 ```
 
-### 3. Deploy with Build
+### 3. Deploy from git
 ```bash
 # Build and deploy from source
 ./bin/flylike --user=user_andi apps deploy go-api-app \
-  --build-source=. \
   --dockerfile=Dockerfile \
   --config=flylike.toml
 ```
