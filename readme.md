@@ -41,9 +41,7 @@ go-api-app/
 ### 3. Deploy from git
 ```bash
 # Build and deploy from source
-./bin/flylike --user=user_andi apps deploy go-api-app \
-  --dockerfile=Dockerfile \
-  --config=flylike.toml
+./bin/flylike --user=user_andi apps deploy go-api-app --config=flylike.toml
 ```
 
 ### 4. Deploy with Pre-built Image
